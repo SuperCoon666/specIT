@@ -23,3 +23,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+task myJavadoc(type: Javadoc) {
+	source = sourceSets.main.allJava
+	destinationDir = file("$buildDir/docs/javadoc")
+	options.docTitle = "My Project Javadoc"
+}
